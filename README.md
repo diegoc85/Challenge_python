@@ -1,12 +1,12 @@
 # Challenge_python
- CHALLENGE (FIAP) - Solução na linguagem Python do problema trazido pela TECH MAHINDRA da FÓRMULA E.
+ CHALLENGE (FIAP) - Solução na linguagem Python do problema trazido pela equipe TECH MAHINDRA da FÓRMULA E.
 
 - GRUPO: 
 
     DIEGO CABRAL - RM: 557817
 
     ARNALDO FILHO - RM: 555780
-    
+
     DÉBORA IVANOWSKI - RM:555694 
 
 - DESCRIÇÃO DO PROBLEMA:
