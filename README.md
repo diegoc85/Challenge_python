@@ -20,15 +20,13 @@ Solução do problema do Challenge, na linguagem Python.
 
     Primeiramente, ao executar o programa, será necessário fazer um prévio cadastro para acessar a área exclusiva do site, pois o jogo não será oferecido a todos. Após o cadastro, o assinante fará login com seu e-mail e senha cadastrados e, se os dados estiverem corretos, será liberado seu acesso à área exclusiva. Depois que entrar, será mostrado um menu com 4 opções: 1) Verificar a velocidade do piloto na lista exibida com os pilotos da atual temporada; 2) Ligar e desligar o som do carro; 3) Informar a posição e a distância do piloto na lista exibida, e 4) Sair do programa. Ao escolher uma das opções será exibida a informação de acordo com a opção desejada. A velocidade, a posição e a distância do piloto escolhido são números escolhidos de forma aleatória usando a biblioteca random. O menu aparecerá até o usuário digitar a opção 4 para sair do progrma, ou seja, o usuário poderá escolhes as opções quando vezes quiser. 
 
-    -> Geração de Posição Atual do Piloto:
+    -> Geração de posição atual do piloto:
+        A posição do piloto é gerada aleatoriamente de 1 até o número total de pilotos na lista. Se a posição for igual a 1, exibirá a mensagem " Parabéns! Ele está liderando a corrida! Go fast!". Se a posição for igual ao último número da lista, exibirá a mensagem "Ah, que pena, ele está em último, mas ainda pode se recuperar!"
 
-        A posição do piloto é gerada aleatoriamente de 1 até o número total de pilotos na lista.
-        Se a posição for 1, exibirá a mensagem "Parabéns! Ele está liderando a corrida! Go fast!"
-        Se a posição for igual ao último número da lista, exibirá a mensagem "Ah, que pena, ele está em último, mas ainda pode se recuperar!"
-    
-    -> Geração de Distância:
+    -> Geração da distância entre os carros:
+        A distância é gerada de forma aleatória com números entre 0 a 150 e a medida é dada em metros. Se a distância foir igual a zero, exibirá a mensagem de que uma ultrapassagem será iniciada e exibirá a distância entre os carros. Se for maior que zero e menor que 50, mostrará a mensagem de que a ultrapassagem está próxima de ocorrer. Se for acima de 50, exibirá a mensagem que não há possibilidade de ocorrer ultrapassagem no momento.
 
-        A distância é gerada aleatoriamente entre 0 e 150 metros. Se a distânciafoir igual a zero, exibirá a mensagem 'Ultrapassagem iniciada e exibirá a distância'. Se for maior que 0 e menor que 50, mostrará a mensagem de que a ultrapassagem está proxima de ocorrer. Se for acima de 50, exibirá a mensagem que não há possibilidade de ocorrer ultrapassagem. 
+     
     
     -> Velocidade do Piloto:
 
