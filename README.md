@@ -3,8 +3,8 @@ Solução do problema do Challenge, na linguagem Python.
 
 - GRUPO: 
     Diego Cabral - RM: 557817
-    Arnaldo Filho - RM: 
-    Débora Ivanowski - RM: 
+    Arnaldo Filho - RM: 555780
+    Débora Ivanowski - RM:555694 
 
 - DESCRIÇÃO DO PROBLEMA:
     A Fórmula E, por ser ainda uma categoria relativamente nova, não possui tanta popularidade nem reconhecimento global como outras categorias de corrida. Além disso, há pouca cobertura e divulgação dos eventos da categoria nos principais meios de comunicação. Embora a Fórmula E esteja fazendo progressos significativos e tenha um futuro promissor, ainda há um caminho longo a se percorrer para torná-la mais atrativa ao público e com maior prestígio dentro do automobilismo. Para isso, é necessário deixá-la mais interativa para aquele que acessa suas plataformas digitais.
@@ -20,7 +20,29 @@ Solução do problema do Challenge, na linguagem Python.
 
     Primeiramente, ao executar o programa, será necessário fazer um prévio cadastro para acessar a área exclusiva do site, pois o jogo não será oferecido a todos. Após o cadastro, o assinante fará login com seu e-mail e senha cadastrados e, se os dados estiverem corretos, será liberado seu acesso à área exclusiva. Depois que entrar, será mostrado um menu com 4 opções: 1) Verificar a velocidade do piloto na lista exibida com os pilotos da atual temporada; 2) Ligar e desligar o som do carro; 3) Informar a posição e a distância do piloto na lista exibida, e 4) Sair do programa. Ao escolher uma das opções será exibida a informação de acordo com a opção desejada. A velocidade, a posição e a distância do piloto escolhido são números escolhidos de forma aleatória usando a biblioteca random. O menu aparecerá até o usuário digitar a opção 4 para sair do progrma, ou seja, o usuário poderá escolhes as opções quando vezes quiser. 
 
-    No código, há uso de funções (def), estruturas de repetição (for e while), estrutura condicional (if, else, elif), além de listas (pilotos), e do uso de dicionários (usuarios), o qual facilita a verificação dos dados cadastros ao se fazer login. 
+    -> Geração de Posição Atual do Piloto:
+
+        A posição do piloto é gerada aleatoriamente de 1 até o número total de pilotos na lista.
+        Se a posição for 1, exibirá a mensagem "Parabéns! Ele está liderando a corrida! Go fast!"
+        Se a posição for igual ao último número da lista, exibirá a mensagem "Ah, que pena, ele está em último, mas ainda pode se recuperar!"
+    
+    -> Geração de Distância:
+
+        A distância é gerada aleatoriamente entre 0 e 150 metros. Se a distânciafoir igual a zero, exibirá a mensagem 'Ultrapassagem iniciada e exibirá a distância'. Se for maior que 0 e menor que 50, mostrará a mensagem de que a ultrapassagem está proxima de ocorrer. Se for acima de 50, exibirá a mensagem que não há possibilidade de ocorrer ultrapassagem. 
+    
+    -> Velocidade do Piloto:
+
+        A velocidade do piloto é gerada aleatoriamente entre um número de 0 a 322 e a nova velocidade é sempre maior que a velocidade mostrada anteriormente.
+    
+    -> Seleção do Piloto por Número:
+
+        A seleção do piloto é feita digitando o número correspondente ao piloto na lista exibida.
+
+
+    No código, há uso de funções (def), estruturas de repetição (for e while), estrutura condicional (if, else, elif), além de listas (pilotos), e do uso de dicionários (usuarios), o qual facilita a verificação dos dados de e-mail e senha cadastrados ao se fazer login. 
+    Para executar esse código, é necessário clonar o repositório utilizando alguma IDE como VS CODE. Depois é só rodar o código e seguir as instruções do programa. 
+    Caso ao executar o código aparece a mensagem de que o excesso de linhas no VS CODE foi extrapolado, é preciso configurar a quantidade de linhas na saída e aumentar esse número consideravelmente. Deve-se ir em configurações (CTRL + SHIFT + P) e digitar preferences: Open User Settings. Buscar pela opção Output: Text line limit, e escrever um valor, como por exemplo 1000 ou até mais. Pronto, o limite de linhas na saída do códigofoi alterado e você não deverá ter problemas na execução do código. 
+    Aproveite e nos dê seu feedback! 
 
 
 
