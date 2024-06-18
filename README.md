@@ -26,20 +26,18 @@ Solução do problema do Challenge, na linguagem Python.
     -> Geração da distância entre os carros:
         A distância é gerada de forma aleatória com números entre 0 a 150 e a medida é dada em metros. Se a distância foir igual a zero, exibirá a mensagem de que uma ultrapassagem será iniciada e exibirá a distância entre os carros. Se for maior que zero e menor que 50, mostrará a mensagem de que a ultrapassagem está próxima de ocorrer. Se for acima de 50, exibirá a mensagem que não há possibilidade de ocorrer ultrapassagem no momento.
 
-     
-    
-    -> Velocidade do Piloto:
+    -> Velocidade atual do piloto:
+        A velocidade atual do piloto é gerada aleatoriamente com números entre 0 a 322 (velocidade máxima alcançada atualmente pelos carros da Fórmula E) e a nova velocidade é sempre maior que a velocidade mostrada anteriormente.
 
-        A velocidade do piloto é gerada aleatoriamente entre um número de 0 a 322 e a nova velocidade é sempre maior que a velocidade mostrada anteriormente.
-    
-    -> Seleção do Piloto por Número:
-
-        A seleção do piloto é feita digitando o número correspondente ao piloto na lista exibida.
+   -> Seleção do piloto pelo seu número dentro da lista:
+        A seleção do pito é feita digitando o número correspondente ao piloto dentro da lista exibida. 
 
 
     No código, há uso de funções (def), estruturas de repetição (for e while), estrutura condicional (if, else, elif), além de listas (pilotos), e do uso de dicionários (usuarios), o qual facilita a verificação dos dados de e-mail e senha cadastrados ao se fazer login. 
     Para executar esse código, é necessário clonar o repositório utilizando alguma IDE como VS CODE. Depois é só rodar o código e seguir as instruções do programa. 
+
     Caso ao executar o código aparece a mensagem de que o excesso de linhas no VS CODE foi extrapolado, é preciso configurar a quantidade de linhas na saída e aumentar esse número consideravelmente. Deve-se ir em configurações (CTRL + SHIFT + P) e digitar preferences: Open User Settings. Buscar pela opção Output: Text line limit, e escrever um valor, como por exemplo 1000 ou até mais. Pronto, o limite de linhas na saída do códigofoi alterado e você não deverá ter problemas na execução do código. 
+    
     Aproveite e nos dê seu feedback! 
 
 
