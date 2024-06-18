@@ -1,6 +1,7 @@
 # Challenge_python
  CHALLENGE (FIAP) 
- -- Solução na linguagem Python do problema trazido pela equipe TECH MAHINDRA da FÓRMULA E -- 
+
+Solução na linguagem Python do problema trazido pela TECH MAHINDRA da FÓRMULA E 
 
 - GRUPO: 
 
