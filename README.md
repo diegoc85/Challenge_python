@@ -1,7 +1,8 @@
 # Challenge_python
-Solução do problema do Challenge, na linguagem Python.
+ CHALLENGE (FIAP) - Solução na linguagem Python do problema trazido pela TECH MAHINDRA
 
 - GRUPO: 
+
     DIEGO CABRAL - RM: 557817
     ARNALDO FILHO - RM: 555780
     DÉBORA IVANOWSKI - RM:555694 
@@ -27,7 +28,7 @@ Solução do problema do Challenge, na linguagem Python.
         A distância é gerada de forma aleatória com números entre 0 a 150 e a medida é dada em metros. Se a distância foir igual a zero, exibirá a mensagem de que uma ultrapassagem será iniciada e exibirá a distância entre os carros. Se for maior que zero e menor que 50, mostrará a mensagem de que a ultrapassagem está próxima de ocorrer. Se for acima de 50, exibirá a mensagem que não há possibilidade de ocorrer ultrapassagem no momento.
 
     -> Velocidade atual do piloto:
-        A velocidade atual do piloto é gerada aleatoriamente com números entre 0 a 322 (velocidade máxima alcançada atualmente pelos carros da Fórmula E) e a nova velocidade é sempre maior que a velocidade mostrada anteriormente.
+        A velocidade atual do piloto é gerada aleatoriamente com números entre 0 a 322 (velocidade máxima alcançada atualmente pelos carros da Fórmula E e a nova velocidade é sempre maior que a velocidade mostrada anteriormente.
 
    -> Seleção do piloto pelo seu número dentro da lista:
         A seleção do pito é feita digitando o número correspondente ao piloto dentro da lista exibida. 
