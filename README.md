@@ -41,9 +41,9 @@ Solução na linguagem Python do problema trazido pela TECH MAHINDRA da FÓRMULA
     No código, há uso de funções (def), estruturas de repetição (for e while), estrutura condicional (if, else, elif), além de listas (pilotos), e do uso de dicionários (usuarios), o qual facilita a verificação dos dados de e-mail e senha cadastrados ao se fazer login. 
     Para executar esse código, é necessário clonar o repositório utilizando alguma IDE como VS CODE. Depois é só rodar o código e seguir as instruções do programa. 
 
-    Caso ao executar o código aparece a mensagem de que o excesso de linhas no VS CODE foi extrapolado, é preciso configurar a quantidade de linhas na saída e aumentar esse número consideravelmente. Deve-se ir em configurações (CTRL + SHIFT + P) e digitar preferences: Open User Settings. Buscar pela opção Output: Text line limit, e escrever um valor, como por exemplo 1000 ou até mais. Pronto, o limite de linhas na saída do códigofoi alterado e você não deverá ter problemas na execução do código. 
+    Caso ao executar o código apareça a mensagem de que o excesso de linhas no VS CODE foi extrapolado, será preciso configurar a quantidade de linhas na saída e aumentar esse número consideravelmente. Deve-se ir em configurações (CTRL + SHIFT + P) e digitar preferences: Open User Settings. Buscar pela opção Output: Text line limit, e escrever um valor, como por exemplo 1000 ou até mais, se for preciso. Pronto, o limite de linhas na saída do código foi alterado e você não deverá ter problemas na execução do código. 
 
-    Aproveite e nos dê seu feedback! 
+    Aproveite o jogo e nao se esqueça de nos dar seu feedback! 
 
 
 
