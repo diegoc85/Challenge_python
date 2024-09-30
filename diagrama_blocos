@@ -1,0 +1,34 @@
+--- EXPLICAÇÃO DO PROJETO EM FORMA DE DIAGRAMA POR BLOCOS ---
++----------------------+
+|    Boas-Vindas        |
++----------------------+
+     /           \
+   'c' ou 'C'    Outra letra
+     |              v
+     v     Opção inválida - FIM
++----------------------+
+|  Cadastro de Usuário  |
++----------------------+
+          |
+          v
++----------------------+
+|       Login          |
++----------------------+
+    /             \
+  Sim            Não
+   |              v
+   v       Tentativas Excedidas - FIM
+   v           
++-------------------------+
+|   Menu Exclusivo         |
++-------------------------+
+  |       |    |     |    |
+  1       2    3     4    5
+  |       |    |     |    |
+  |       |    |     |    |
+  v       v    v     v    v
+Análise  Veloc Pos Equipe Sair
+Video    Atual AtuaPiloto
+--------------------------------
+               v
+              FIM
