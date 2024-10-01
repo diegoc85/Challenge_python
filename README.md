@@ -69,7 +69,8 @@ Solução na linguagem Python do problema trazido pela TECH MAHINDRA da FÓRMULA
     No código, há uso de funções (def), função dentro de função, função chamando outra função, estruturas de repetição (for e while), estrutura condicional (if, else, elif), DataFrame (pilotos), listas com dicionários (usuários), uso de dicionários, o qual facilita a verificação dos dados de e-mail e senha cadastrados ao se fazer login. 
     Para executar esse código, é necessário clonar este repositório utilizando alguma IDE como VS CODE. Depois é só rodar o código e seguir as instruções do programa. 
 
-    Nos arquivos do repositório também estão os relatórios gerados com as saídas da execução do código, bem como um diagrama em blocos do funcionamento do código. 
+    Nos arquivos do repositório também estão os relatórios gerados com as saídas da execução do código, bem como um diagrama em blocos do funcionamento do código.
+    Também nos arquivos estão os dois arquivos (ssd_mobilenet_v3 e frozen_inference_graph) necessários para rodar o modelo neural. Esse modelo utilizado foi treinado na base de dados coco.names (lista com mais de 80 tipos de objetos que o modelo consegue identificar), que é um dos arquivos do projeto. 
 
     Caso ao executar o código apareça a mensagem de que o excesso de linhas no VS CODE foi extrapolado, será preciso configurar a quantidade de linhas na saída e aumentar esse número consideravelmente. Deve-se ir em configurações (CTRL + SHIFT + P) e digitar preferences: Open User Settings. Buscar pela opção Output: Text line limit, e escrever um valor, como por exemplo 1000 ou até mais, se for preciso. Pronto, o limite de linhas na saída do código foi alterado e você não deverá ter problemas na execução do código. 
 
