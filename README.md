@@ -12,38 +12,60 @@ Solução na linguagem Python do problema trazido pela TECH MAHINDRA da FÓRMULA
     DÉBORA IVANOWSKI - RM:555694 
 
 - DESCRIÇÃO DO PROBLEMA:
-    A Fórmula E, por ser ainda uma categoria relativamente nova, não possui tanta popularidade nem reconhecimento global como outras categorias de corrida. Além disso, há pouca cobertura e divulgação dos eventos da categoria nos principais meios de comunicação. Embora a Fórmula E esteja fazendo progressos significativos e tenha um futuro promissor, ainda há um caminho longo a se percorrer para torná-la mais atrativa ao público e com maior prestígio dentro do automobilismo. Para isso, é necessário deixá-la mais interativa para aquele que acessa suas plataformas digitais.
+    A Fórmula E, por ser ainda uma categoria relativamente nova, não possui tanta popularidade nem reconhecimento global como outras categorias de corrida. Além disso, há pouca cobertura e divulgação dos eventos da categoria nos principais meios de comunicação. Embora a Fórmula E esteja fazendo progressos significativos e tenha um futuro promissor, ainda há um caminho longo a se percorrer para torná-la mais atrativa ao público e com maior prestígio dentro do automobilismo. Para isso, é necessário achar soluções que possam deixá-la mais interativa para seu espectador.
 
 - SOLUÇÃO DO PROBLEMA:
-    A solução visa, por meio da criação de jogos interativos como quizzes, tornar a experiência do espectador que acessa o site ou app mais divertida e atrativa. A ideia é criar uma conexão maior entre o espectador e a Fórmula E oferecendo jogos informativos e que possibilitam, por exemplo, a personalização do som dos carros elétricos com motores à combustão. Esta, aliás, é uma das maiores reclamações daqueles que não gostam da Fórmula E, isto é, a ausência do ronco dos motores e também a falta de interatividade em suas plataformas. Atualmente não há uma solução desse tipo no site e aplicativo móvel.  
-    Por meio de jogos interativos, será possível trazer mais dados e estatísticas relevantes da categoria como a velocidade atual do piloto, bem como a sua distância para o piloto a sua frente e sua posição atual. Essas informações não são exibidas aos espectadores que acessam o site e o aplicativo. Os jogos, além de divertirem, poderão exibir informações em tempo real da corrida para aqueles que jogam. 
-    Os jogos ajudarão a quebrar os preconceitos que o grande público tem em relação à corrida elétrica, como a ausência de barulho. A ideia é utilizar o jogo como uma isca para que novos usuários possam se interessar pela Fórmula E. Poderá ser apresentado ao espectador outras formas de barulho e diferenciais que só existem nessa categoria. Um exemplo é o modo de ataque que é a possibilidade de ganhar potência extra durante um período ao passar por uma zona de ativação.  
-    Esse jogo será oferecido dentro de uma área exclusiva do site e do aplicativo móvel, e será um benefício cobrado por meio de uma assinatura mensal. 
+    A solução visa, por meio da Visão Computacional, tornar a experiência do espectador que assiste à corrida presencialmente mais divertida e interativa. A ideia é criar uma conexão maior entre o espectador e a Fórmula E fornecendo informações relevantes que o ajudem a acompanhar e a se interar melhor daquilo que está acontecendo no circuito. Dessa forma, o usuário não se sentirá perdido ou alheio aos acontecimentos importantes como a troca de posições entre os carros. Esse código tem como objetivo simular o uso da Visão Computacional, por meio da câmera de um celular ou de um óculos de realidade aumentada, para rastrear e detectar os carros na pista. Assim, o espectador terá acesso a informações em tempo real, como a velocidade dos carros, volta mais rápida, a posição do piloto rastreado na corrida, além do seu nome e da sua respectiva equipe. 
+
+    A Visão Computacional é um ramo da inteligência artifial que possibilita aos computadores a interpretarem e compreenderem o mundo visual da mesma forma que os humanos. Ela envolve a captura, o processamento e a análise de imagens e vídeos para extrair informações considerada significativas. Nesse caso em específico do código, há a captura de imagem por meio de um vídeo, mas também pode ser por uma imagem ou por uma câmera durante a corrida, por exemplo. Após a captura, a imagem é transformada em dados digitais que o computador poderá processar. Durante o processo, é extraído características como bordas, formas, cores, textura ou padrões encontrados na imagem. A partir dessas características, o sistema poderá realizar tarefas como:
+    -> Reconhecimento de objetos: identificar e classificar objetos, como por exemplo, ('Essa imagem contém um carro de automobilismo')
+
+    -> Detecção de padrões: encontrar padrões como letras e gestos 
+
+    -> Análise de movimento: Em vídeos, poderá compreender o movimento dos objetos como os carros na Fórmula E. 
+
+    São usadas também técnicas de aprendizado de máquina. Algoritmos de aprendizado profundo (redes neurais) são frequentemente utilizados para melhorar o reconhecimento de padrões e aumentar a precisão, sendo treinados com grandes volumes de dados visuais. Além de identificar o objeto, o algoritmo fornece a localização (normalmente por meio de caixas delimitadores ou bounding boxes) para mostrar onde o objeto está na imagem. No código é usado essas caixa delimitadores para mostrar onde os carros estão. 
+
+    - Modelos que normalmente são usados para a detecção de objetos:
+
+        - YOLO (You Only Look Once): é um modelo de detecção em tempo real que divide a imagem em uma grade e faz a predição simultânea de múltiplos objetos e suas posições.
+
+       -  SSD (Single Shot Detector): Detecta objetos em uma única etapa, o que permite detecção em tempo real com boa precisão. Esse é o modulo que está sendo usado no código desenvolvido para reconhecer os carros do vídeo. 
+
+        - R-CNN (Regions with Convolutional Neural Networks): Utiliza uma abordagem em duas etapas, primeiro identificando regiões de interesse e, em seguida, classificando o que está dentro dessas regiões.
+    
+    Primeiramente, o objeto é detectado no vídeo usando o modelo de detecção, que nesse caso é o OPEN CV, uma biblioteca de visão computacional de código aberto que permite aos desenvolvedores criar aplicações de visão artificial e inteligência artifical. Depois de detectado, o objeto é rastreado ao longo de vários quadros do vídeo. O rastreamento pode ser interrompido e uma nova detecção pode ser realizada caso o objeto saia da área de visão ou o sistema perca o objeto. À medida que o objeto se move, a posição é atualizada constantemente pelo rastreador, o que permite saber exatamente onde o objeto está em cada momento. 
+
+
+     
 
 - INSTRUÇÕES DE USO DO PROGRAMA:
-    No código em Python, simulamos como será implementado no site a nossa solução, que é a criação de um jogo estilo quiz, em que o usuário terá seus conhecimentos testados e também receberá informações relevantes sobre a Fórmula E. Além disso, terá acesso em tempo real de dados de telemetria dos carros como a velocidade atual de um determinado piloto, sua distância em relação ao piloto a sua frente e sua classificação atual na corrida. No jogo, será possível também personalizar o som dos motores dos carros elétricos com sons de motores à combustão de carros da Fórmula 1 e de outras categorias. Por enquanto, só será possível desligar e ligar o som dos carros, mas, posteriormente, será implementada as opções de sons de carros. Foi utilizado o Jupyter Notebook para a criação do código. 
+    No código em Python, simulamos como será implementada a nossa solução usando a Visão Computacional. Para isso, foi utilizado um vídeo com carros se movimentando em uma rodovia onde o algoritmo é auxliado pela rede neural treinada (SSD), trabalhando de forma conjunta com a biblioteca OPEN CV reconhecendo detectando e fazendo o rastreio dos carros que aparecem no vídeo. Para essa demonstração, foi criado um sistema simples de cadastro (nome, e-mail e senha) e de login (e-mail e senha) para que o usuário possa acessar a área exclusiva do VISION FE. Sendo assim, não será possível acessar a solução sem fazer previamente um cadastro e logo após o login. No código, após o login efetuado com sucesso (só terá 3 tentativas), o usuário poderá escolher dentre as 5 opções que aparecerão no menu: 
+    1) Carregar o VISION FE, 
+    2) Mostrar a velocidade atual do carro rastreado (é fornecida de forma aleatória, por meio da biblioteca random - de 0 320), 
+    3) Posição atual do carro do piloto rastreado (obtida de forma aleatória pela biblioteca random - 1 a 22), 
+    4) Nome do piloto e da sua respectiva equipe (obtida por meio de um arquivo CSV que foi transformado em um DataFrame utilizando a biblioteca pandas) ou 
+    5) Sair do programa. 
 
-    Primeiramente, ao executar o programa, será necessário fazer um prévio cadastro para acessar a área exclusiva do site, pois o jogo não será oferecido a todos. Após o cadastro, o assinante fará login com seu e-mail e senha cadastrados e, se os dados estiverem corretos, será liberado seu acesso à área exclusiva. Depois que entrar, será mostrado um menu com 4 opções: 1) Verificar a velocidade do piloto na lista exibida com os pilotos da atual temporada; 2) Ligar e desligar o som do carro; 3) Informar a posição e a distância do piloto na lista exibida, e 4) Sair do programa. Ao escolher uma das opções será exibida a informação de acordo com a opção desejada. A velocidade, a posição e a distância do piloto escolhido são números escolhidos de forma aleatória usando a biblioteca random. O menu aparecerá até o usuário digitar a opção 4 para sair do progrma, ou seja, o usuário poderá escolhes as opções quando vezes quiser. 
+    Como o código é apenas um protótipo para demonstrar o funcionamento do VISION FE, o usuário poderá escolher a opção que desejar para obter as informações geradas pelo VISION FE. No entanto, na prática, assim que o VISION FE for ativado, o espectador receberá todas essas informações mencionadas acima, em tempo real, de uma só vez na tela do seu dispositivo. Dessa forma, não será necessário escolher opções como no menu do código. 
 
-    -> Geração de posição atual do piloto:
-        A posição do piloto é gerada aleatoriamente de 1 até o número total de pilotos na lista. Se a posição for igual a 1, exibirá a mensagem " Parabéns! Ele está liderando a corrida! Go fast!". Se a posição for igual ao último número da lista, exibirá a mensagem "Ah, que pena, ele está em último, mas ainda pode se recuperar!"
+    - Foi utilizado o Jupyter Notebook para a criação do código. 
+    - Bibliotecas utilizadas no projeto:
+        pandas as pd 
+        getpass
+        random
+        cv2
+        numpy as np
+        cvzone
 
-    -> Geração da distância entre os carros:
-        A distância é gerada de forma aleatória com números entre 0 a 150 e a medida é dada em metros. Se a distância foir igual a zero, exibirá a mensagem de que uma ultrapassagem será iniciada e exibirá a distância entre os carros. Se for maior que zero e menor que 50, mostrará a mensagem de que a ultrapassagem está próxima de ocorrer. Se for acima de 50, exibirá a mensagem que não há possibilidade de ocorrer ultrapassagem no momento.
+    No código, há uso de funções (def), função dentro de função, função chamando outra função, estruturas de repetição (for e while), estrutura condicional (if, else, elif), DataFrame (pilotos), listas com dicionários (usuários), uso de dicionários, o qual facilita a verificação dos dados de e-mail e senha cadastrados ao se fazer login. 
+    Para executar esse código, é necessário clonar este repositório utilizando alguma IDE como VS CODE. Depois é só rodar o código e seguir as instruções do programa. 
 
-    -> Velocidade atual do piloto:
-        A velocidade atual do piloto é gerada aleatoriamente com números entre 0 a 322 (velocidade máxima alcançada atualmente pelos carros da Fórmula E e a nova velocidade é sempre maior que a velocidade mostrada anteriormente.
-
-   -> Seleção do piloto pelo seu número dentro da lista:
-        A seleção do pito é feita digitando o número correspondente ao piloto dentro da lista exibida. 
-
-
-    No código, há uso de funções (def), estruturas de repetição (for e while), estrutura condicional (if, else, elif), além de listas (pilotos), e do uso de dicionários (usuarios), o qual facilita a verificação dos dados de e-mail e senha cadastrados ao se fazer login. 
-    Para executar esse código, é necessário clonar o repositório utilizando alguma IDE como VS CODE. Depois é só rodar o código e seguir as instruções do programa. 
+    Nos arquivos do repositório também estão os relatórios gerados com as saídas da execução do código, bem como um diagrama em blocos do funcionamento do código. 
 
     Caso ao executar o código apareça a mensagem de que o excesso de linhas no VS CODE foi extrapolado, será preciso configurar a quantidade de linhas na saída e aumentar esse número consideravelmente. Deve-se ir em configurações (CTRL + SHIFT + P) e digitar preferences: Open User Settings. Buscar pela opção Output: Text line limit, e escrever um valor, como por exemplo 1000 ou até mais, se for preciso. Pronto, o limite de linhas na saída do código foi alterado e você não deverá ter problemas na execução do código. 
 
-    Aproveite o jogo e nao se esqueça de nos dar seu feedback! 
+    Divirta-se com o VISION FE e nao se esqueça de nos dar seu feedback! 
 
 
 
